@@ -8,8 +8,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST_DNS }}
-          username: alanys
-          password: passwords
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd $HOME/www/
